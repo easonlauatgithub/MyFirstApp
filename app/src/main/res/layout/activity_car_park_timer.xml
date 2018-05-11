@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easontesting.myfirstapp.CarParkTimer">
+    <Button
+        android:id="@+id/buttonStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_park_start_date"
+        android:onClick="setStartDate"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/dateStarttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonStartDate"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="18dp"/>
+    <Button
+        android:id="@+id/buttonStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_park_start_time"
+        android:onClick="setStartTime"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStartDate"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/timeStarttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStartDate"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonStartTime"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/buttonEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_park_end_date"
+        android:onClick="setEndDate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStartTime"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/dateEndtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Date"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonEndDate"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStartTime"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="18dp"/>
+    <Button
+        android:id="@+id/buttonEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/car_park_end_time"
+        android:onClick="setEndTime"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEndDate"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/timeEndtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEndDate"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonEndTime"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:id="@+id/car_park_charge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/car_park_charge_message"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEndTime"
+        android:layout_marginLeft="16dp" />
+    <Button
+        android:id="@+id/car_park_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="calParkingFee"
+        android:text="@string/button_send"
+        app:layout_constraintTop_toBottomOf="@+id/car_park_charge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp" />
+    <TextView
+        android:id="@+id/car_park_time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/car_park_button"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/car_park_button" />
+    <TextView
+        android:id="@+id/car_park_time_view_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/car_park_time_view"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/car_park_time_view" />
+
+</android.support.constraint.ConstraintLayout>
