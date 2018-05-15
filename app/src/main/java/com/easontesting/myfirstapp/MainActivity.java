@@ -42,4 +42,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickToLayoutActivity(View view){
+        Intent i = new Intent(this, LayoutActivity.class);
+        startActivity(i);
+    }
+
 }

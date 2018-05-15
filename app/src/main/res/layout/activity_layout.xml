@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RelativeLayout -->
+<!--
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easontesting.myfirstapp.LayoutActivity"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    >
+    <ToggleButton
+        android:id="@+id/btn_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:textOn="ON"
+        android:textOff="OFF"
+        android:onClick="onToggleButtonClicked"/>
+    <Button
+        android:id="@+id/btn_center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:text="CLICK ME 2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_center_horizontal"
+        android:layout_alignLeft="@+id/btn_center_horizontal"
+        android:layout_below="@+id/btn_center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:text="BELOW"/>
+</RelativeLayout>
+-->
+<!-- LinearLayout -->
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easontesting.myfirstapp.LayoutActivity"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="Message"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="SEND"/>
+</LinearLayout>
+-->
+<!-- GridLayout -->
+<!--
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easontesting.myfirstapp.LayoutActivity"
+    android:columnCount="2"
+    android:rowCount="5"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:text="0,0 To"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:hint="0,1 Enter Email Address"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_rowSpan="2"
+        android:gravity="top"
+        android:hint="1,0 Message"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_columnSpan="2"
+        android:text="3,0 SEND"/>
+</GridLayout>
+-->
+<!-- Other components -->
+<!--
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.easontesting.myfirstapp.LayoutActivity"
+android:columnCount="2"
+android:rowCount="5"
+    >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_row="0"
+    android:layout_column="0"
+    android:text="0,0 To"/>
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_row="0"
+    android:layout_column="1"
+    android:hint="0,1 Enter Email Address"/>
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill"
+    android:layout_row="1"
+    android:layout_column="0"
+    android:layout_columnSpan="2"
+    android:layout_rowSpan="2"
+    android:gravity="top"
+    android:hint="1,0 Message"/>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_row="3"
+    android:layout_column="0"
+    android:layout_gravity="center_horizontal"
+    android:layout_columnSpan="2"
+    android:text="3,0 SEND"/>
+<GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_row="4"
+    android:layout_column="0"
+    android:layout_columnSpan="2"
+    android:layout_rowSpan="1"
+    android:columnCount="3"
+    android:rowCount="10"
+    >
+    <ToggleButton
+        android:id="@+id/btn_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_gravity="start"
+        android:textOn="Toggle ON"
+        android:textOff="Toggle OFF"
+        android:onClick="onToggleButtonClicked"/>
+    <Switch
+        android:id="@+id/btn_swtich"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_gravity="start"
+        android:textOn="Switch ON"
+        android:textOff="Switch OFF"
+        android:onClick="onSwitchButtonClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_milk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:text="Milk"
+        android:onClick="onCheckboxClicked"/>
+    <CheckBox
+        android:id="@+id/checkbox_sugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:text="SUGAR"
+        android:onClick="onCheckboxClicked"/>
+    <Button
+        android:id="@+id/btn_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:layout_gravity="start"
+        android:text="Checkbox Btn"
+        android:onClick="onCheckboxButtonClicked"/>
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radio_cavemen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cavemen"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/radio_astronauts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Astronauts"
+            android:onClick="onRadioButtonClicked"/>
+        <Button
+            android:id="@+id/btn_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Radio Btn"
+            android:onClick="onRadioGroupButtonClicked"/>
+    </RadioGroup>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:entries="@array/beer_colors"/>
+    <Button
+        android:id="@+id/btn_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:layout_gravity="start"
+        android:text="Spinner Btn"
+        android:onClick="onSpinnerButtonClicked"/>
+</GridLayout>
+</GridLayout>
+-->
+<!-- Scroll View -->
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easontesting.myfirstapp.LayoutActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/layout_activity_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/layout_activity_button"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:drawableBottom="@drawable/img3"
+                android:onClick="onClickToLayoutActivity"/>
+            <ImageView
+                android:id="@+id/layout_actiity_image_view"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@drawable/img1"
+                android:contentDescription="@string/layout_activity_image_button"
+                android:onClick="onClickToLayoutActivity"/>
+            <ImageButton
+                android:id="@+id/layout_activity_image_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@drawable/img3"
+                android:onClick="onClickToLayoutActivity" />
+            <Button
+                android:id="@+id/layout_activity_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/layout_activity_button"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:drawableBottom="@drawable/img3"
+                android:onClick="onClickToLayoutActivity"/>
+            <ImageView
+                android:id="@+id/layout_actiity_image_view1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@drawable/img1"
+                android:contentDescription="@string/layout_activity_image_button"
+                android:onClick="onClickToLayoutActivity"/>
+            <ImageButton
+                android:id="@+id/layout_activity_image_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@drawable/img3"
+                android:onClick="onClickToLayoutActivity" />
+        </LinearLayout>
+    </ScrollView>
+</HorizontalScrollView>

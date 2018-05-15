@@ -34,7 +34,8 @@
             android:label="@string/title_activity_find_beer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".TimerActivity" />
-        <activity android:name=".CarParkTimer"></activity>
+        <activity android:name=".CarParkTimer" />
+        <activity android:name=".LayoutActivity"></activity>
     </application>
 
 </manifest>
