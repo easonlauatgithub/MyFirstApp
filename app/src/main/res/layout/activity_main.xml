@@ -54,36 +54,15 @@
         app:layout_constraintTop_toBottomOf="@+id/timer_button"
         app:layout_constraintLeft_toRightOf="parent"/>
     <!-- LayoutActivity-->
-    <Button
-        android:id="@+id/layout_activity_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/car_park_timer_button"
-        app:layout_constraintLeft_toRightOf="parent"
-        android:text="@string/layout_activity_button"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:drawableBottom="@drawable/img3"
-        android:onClick="onClickToLayoutActivity"/>
-    <ImageView
-        android:id="@+id/layout_actiity_image_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/car_park_timer_button"
-        app:layout_constraintLeft_toRightOf="@+id/layout_activity_button"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:src="@drawable/img1"
-        android:contentDescription="@string/layout_activity_image_button"
-        android:onClick="onClickToLayoutActivity"/>
     <ImageButton
         android:id="@+id/layout_activity_image_button"
         android:layout_width="80dp"
-        android:layout_height="110dp"
+        android:layout_height="80dp"
         app:layout_constraintTop_toBottomOf="@+id/car_park_timer_button"
-        app:layout_constraintLeft_toRightOf="@+id/layout_actiity_image_view"
+        app:layout_constraintLeft_toRightOf="parent"
         android:layout_marginLeft="@dimen/margin"
         android:layout_marginTop="@dimen/margin"
-        android:src="@drawable/img3"
+        android:src="@drawable/img1"
+        android:scaleType="fitCenter"
         android:onClick="onClickToLayoutActivity" />
 </android.support.constraint.ConstraintLayout>

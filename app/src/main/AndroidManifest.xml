@@ -35,7 +35,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".TimerActivity" />
         <activity android:name=".CarParkTimer" />
-        <activity android:name=".LayoutActivity"></activity>
+        <activity android:name=".LayoutActivity" />
+        <activity android:name=".TopLevelActivity"></activity>
     </application>
 
 </manifest>

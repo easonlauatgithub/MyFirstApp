@@ -2,6 +2,7 @@ package com.easontesting.myfirstapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -18,10 +19,11 @@ public class LayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
-        createToast();
+        createToast(null);
     }
-    /* Other components
+    /* Other components */
     public void onToggleButtonClicked(View view){
+        createToast(view);
         boolean on = ((ToggleButton) view).isChecked();
         if(on){
             Log.e(TAG4,"easontesting LayoutActivity Toggle on");
@@ -30,6 +32,7 @@ public class LayoutActivity extends AppCompatActivity {
         }
     }
     public void onSwitchButtonClicked(View view){
+        createToast(view);
         boolean on = ((Switch) view).isChecked();
         if(on){
             Log.e(TAG4,"easontesting LayoutActivity Switch on");
@@ -55,6 +58,7 @@ public class LayoutActivity extends AppCompatActivity {
         }
     }
     public void onCheckboxButtonClicked(View view){
+        createToast(view);
         CheckBox cb1 = (CheckBox) findViewById(R.id.checkbox_milk);
         CheckBox cb2 = (CheckBox) findViewById(R.id.checkbox_sugar);
         boolean cb1_checked = cb1.isChecked();
@@ -71,6 +75,7 @@ public class LayoutActivity extends AppCompatActivity {
         }
     }
     public void onRadioButtonClicked(View view){
+        createToast(view);
         RadioGroup rg = (RadioGroup) findViewById(R.id.radio_group);
         int rg_id = rg.getCheckedRadioButtonId();
         switch(rg_id){
@@ -83,6 +88,7 @@ public class LayoutActivity extends AppCompatActivity {
         }
     }
     public void onRadioGroupButtonClicked(View view){
+        createToast(view);
         RadioGroup rg = (RadioGroup) findViewById(R.id.radio_group);
         int rg_id = rg.getCheckedRadioButtonId();
         if(rg_id == -1){
@@ -98,15 +104,18 @@ public class LayoutActivity extends AppCompatActivity {
         }
     }
     public void onSpinnerButtonClicked(View view){
+        createToast(view);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         String string = String.valueOf( spinner.getSelectedItem() );
             Log.e(TAG4,"easontesting LayoutActivity Spinner "+string+" is selected");
     }
-    */
-    public void createToast(){
-        CharSequence text = "It is a toast";
-        int duration = Toast.LENGTH_LONG;
-        Toast t = Toast.makeText(this, text, duration);
+    public void createToast(View v){
+        CharSequence txt = "Toast - onCreate LayoutActivity";
+        if(v!=null) {
+            txt = "Toast - " + v.getClass().getSimpleName();
+        }
+        int duration = Toast.LENGTH_SHORT;
+        Toast t = Toast.makeText(this, txt, duration);
         t.show();
     }
 }
