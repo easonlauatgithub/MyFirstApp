@@ -1,5 +1,34 @@
 <resources>
-    <string name="app_name">App 1158 20180516</string>
+    <string name="app_name">App 1809 20180516</string>
+
+    <string name="btn_to_listview">Go to Starbuzz App</string>
+    <string name="coffee_logo">Starbuzz App Logo</string>
+    <string-array name="options">
+        <item>Drinks</item>
+        <item>Food</item>
+        <item>Stores</item>
+    </string-array>
+    <string name="title_activity_drink_category">DrinkCategoryActivity Label</string>
+
+    <string name="layout_activity_button">Go to LayoutActivity</string>
+    <string name="layout_activity_image_button">Image Button of LayoutActivity</string>
+
+    <string name="btn_to_car_park_timer">Go to 停車場計時器</string>
+    <string name="car_park_start_date">入場日期</string>
+    <string name="car_park_start_time">入場時間</string>
+    <string name="car_park_end_date">離埸日期</string>
+    <string name="car_park_end_time">離埸時間</string>
+    <string name="car_park_charge_message">每小時收費</string>
+
+    <string name="btn_to_timer">Go to Timer</string>
+    <string name="start">start</string>
+    <string name="stop">stop</string>
+    <string name="reset">reset</string>
+    <string name="hello_article_fragment">Hello article fragment</string>
+    <string name="hello_headlines_fragment">Hello headlines fragment</string>
+    <string name="title_activity_find_beer">FindBeerActivity</string>
+    <string name="rotate_to_landscape">landscape</string>
+
     <string name="edit_message">Enter a message</string>
     <string name="text_view">TextView</string>
     <string name="button_send">Send</string>
@@ -13,20 +42,4 @@
         <item>Boston Celtics</item>
     </string-array>
     <string name="chooserTitle">Send to below...</string>
-    <string name="start">start</string>
-    <string name="stop">stop</string>
-    <string name="reset">reset</string>
-    <string name="hello_article_fragment">Hello article fragment</string>
-    <string name="hello_headlines_fragment">Hello headlines fragment</string>
-    <string name="title_activity_find_beer">FindBeerActivity</string>
-    <string name="rotate_to_landscape">landscape</string>
-    <string name="btn_to_timer">Go to Timer</string>
-    <string name="btn_to_car_park_timer">停車場計時器</string>
-    <string name="car_park_start_date">入場日期</string>
-    <string name="car_park_start_time">入場時間</string>
-    <string name="car_park_end_date">離埸日期</string>
-    <string name="car_park_end_time">離埸時間</string>
-    <string name="car_park_charge_message">每小時收費</string>
-    <string name="layout_activity_button">LAYOUT</string>
-    <string name="layout_activity_image_button">Image Button of LayoutActivity</string>
 </resources>

@@ -47,4 +47,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void onClickToListView(View view){
+        Intent i = new Intent(this, TopLevelActivity.class);
+        startActivity(i);
+    }
+
 }

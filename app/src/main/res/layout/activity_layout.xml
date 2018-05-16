@@ -271,7 +271,7 @@ android:rowCount="5"
                 android:text="@string/layout_activity_button"
                 android:layout_marginLeft="@dimen/margin"
                 android:layout_marginTop="@dimen/margin"
-                android:drawableBottom="@drawable/img3"
+                android:drawableBottom="@drawable/click3"
                 android:onClick="createToast"/>
             <ImageView
                 android:id="@+id/layout_actiity_image_view"
@@ -279,7 +279,7 @@ android:rowCount="5"
                 android:layout_height="150dp"
                 android:layout_marginLeft="@dimen/margin"
                 android:layout_marginTop="@dimen/margin"
-                android:src="@drawable/img1"
+                android:src="@drawable/click1"
                 android:contentDescription="@string/layout_activity_image_button"
                 android:onClick="createToast"/>
             <ImageButton
@@ -288,7 +288,7 @@ android:rowCount="5"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin"
                 android:layout_marginTop="@dimen/margin"
-                android:src="@drawable/img3"
+                android:src="@drawable/click3"
                 android:onClick="createToast" />
                 <ToggleButton
                     android:id="@+id/btn_toggle"

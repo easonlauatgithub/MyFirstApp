@@ -36,7 +36,11 @@
         <activity android:name=".TimerActivity" />
         <activity android:name=".CarParkTimer" />
         <activity android:name=".LayoutActivity" />
-        <activity android:name=".TopLevelActivity"></activity>
+        <activity android:name=".TopLevelActivity" />
+        <activity
+            android:name=".DrinkCategoryActivity"
+            android:label="@string/title_activity_drink_category" />
+        <activity android:name=".DrinkActivity"></activity>
     </application>
 
 </manifest>
