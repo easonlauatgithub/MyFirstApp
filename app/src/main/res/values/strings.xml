@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App 1809 20180516</string>
+    <string name="app_name">App 1536 20180517</string>
 
     <string name="btn_to_listview">Go to Starbuzz App</string>
     <string name="coffee_logo">Starbuzz App Logo</string>
@@ -9,6 +9,7 @@
         <item>Stores</item>
     </string-array>
     <string name="title_activity_drink_category">DrinkCategoryActivity Label</string>
+    <string name="favorite">Favorite</string>
 
     <string name="layout_activity_button">Go to LayoutActivity</string>
     <string name="layout_activity_image_button">Image Button of LayoutActivity</string>

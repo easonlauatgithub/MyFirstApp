@@ -10,9 +10,9 @@ public class Drink {
         this.imageResourceId = imageResourceId;
     }
     public static final Drink[] drinks = {
-            new Drink("Latte", "Latter is ...", R.drawable.coffee_latte),
-            new Drink("Cappuccino", "Cappuccino is ...", R.drawable.coffee_cappuccino),
-            new Drink("Mocha", "Mocha is ...", R.drawable.coffee_mocha)
+            new Drink("Latte[Drink.java]", "Latter is ...", R.drawable.coffee_latte),
+            new Drink("Cappuccino[Drink.java]", "Cappuccino is ...", R.drawable.coffee_cappuccino),
+            new Drink("Mocha[Drink.java]", "Mocha is ...", R.drawable.coffee_mocha)
     };
     public String getName(){ return name; }
     public String getDescription(){ return description; }
