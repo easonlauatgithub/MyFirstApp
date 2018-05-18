@@ -15,8 +15,8 @@ android {
         applicationId "com.easontesting.myfirstapp"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 9
-        versionName "Android Studuio - versionName - Nine"
+        versionCode 10
+        versionName "Android Studuio - versionName - Ten"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
