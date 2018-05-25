@@ -103,6 +103,31 @@
             android:layout_marginTop="@dimen/margin"
             app:layout_constraintTop_toBottomOf="@+id/listview_button"
             app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- BroadcastReceiver -->
+        <Button
+            android:id="@+id/broadcast_receiver_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickToBroadcastReceiverTest"
+            android:text="@string/btn_to_broadcast_receiver"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_button"
+            app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- Started Service -->
+        <Button
+            android:id="@+id/started_service_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickToStartedService"
+            android:text="@string/btn_to_started_service"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/broadcast_receiver_button"
+            app:layout_constraintLeft_toRightOf="parent"/>
+
     </LinearLayout>
 </ScrollView>
 <!-- </android.support.constraint.ConstraintLayout> -->

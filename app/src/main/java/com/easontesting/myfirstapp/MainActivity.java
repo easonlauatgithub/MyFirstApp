@@ -32,29 +32,32 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(i1);
         startActivity(i2);
     }
-
     public void onClickToTimer(View view){
         Intent intent = new Intent(this, TimerActivity.class);
         startActivity(intent);
     }
-
     public void onClickToCarParkTimer(View view){
         Intent intent = new Intent(this, CarParkTimer.class);
         startActivity(intent);
     }
-
     public void onClickToLayoutActivity(View view){
         Intent i = new Intent(this, LayoutActivity.class);
         startActivity(i);
     }
-
     public void onClickToListView(View view){
         Intent i = new Intent(this, TopLevelActivity.class);
         startActivity(i);
     }
-
     public void onClickToFragment(View view){
         Intent i = new Intent(this, FragmentActivity.class);
+        startActivity(i);
+    }
+    public void onClickToBroadcastReceiverTest(View view){
+        Intent i = new Intent(this, BroadcastReceiverTestActivity.class);
+        startActivity(i);
+    }
+    public void onClickToStartedService(View view){
+        Intent i = new Intent(this, StartedServiceActivity.class);
         startActivity(i);
     }
 }

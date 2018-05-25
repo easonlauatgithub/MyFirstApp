@@ -1,10 +1,25 @@
 <resources>
-    <string name="app_name">App 2238 20180521</string>
+    <string name="app_name">App 0146 20180525</string>
+
+    <string name="btn_to_started_service">Go to Started Service</string>
+    <string name="started_service_btn_response">From strings.xml to StartedServiceActivity to DelayedMessageService to T/N</string>
+    <string name="started_service_btn1_text">Click to create Start Service (DelayedMessageService)</string>
+    <string name="started_service_btn_start_mp3_text">Play MP3</string>
+    <string name="started_service_btn_stop_mp3_text">Stop MP3</string>
+
+    <string name="btn_to_broadcast_receiver">Go to BroadcastReceiver/ Notification</string>
+    <string name="hello_broadcast_receiver">Hello BroadcastReceiver</string>
+    <string name="Notification_1">Notification 1</string>
+    <string name="Notification_2">Notification 2</string>
+    <string name="Notification_3">Notification 3</string>
+    <string name="Notification_4">Notification 4</string>
+    <string name="Notification_5">Notification 5</string>
+
 
     <string name="btn_to_fragment">Go to Fragment</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="btn_to_listview">Go to Starbuzz App</string>
+    <string name="btn_to_listview">Go to Starbuzz App (SQLite)</string>
     <string name="coffee_logo">Starbuzz App Logo</string>
     <string-array name="options">
         <item>Drinks</item>
