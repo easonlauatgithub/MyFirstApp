@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">App 0146 20180525</string>
+    <string name="app_name">App 2124 20180525</string>
 
     <string name="btn_to_started_service">Go to Started Service</string>
-    <string name="started_service_btn_response">From strings.xml to StartedServiceActivity to DelayedMessageService to T/N</string>
+    <string name="started_service_btn_response">DelayedMessageService is created.</string>
     <string name="started_service_btn1_text">Click to create Start Service (DelayedMessageService)</string>
     <string name="started_service_btn_start_mp3_text">Play MP3</string>
     <string name="started_service_btn_stop_mp3_text">Stop MP3</string>

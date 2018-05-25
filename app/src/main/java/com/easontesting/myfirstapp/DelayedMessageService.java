@@ -15,10 +15,10 @@ import android.widget.Toast;
 import java.util.Date;
 
 public class DelayedMessageService extends IntentService {
-    public static final String EXTRA_MESSAGE = "message defined in DelayedMessageService(IntentService)";
+    public static final String EXTRA_MESSAGE = "EXTRA_MESSAGE defined in DelayedMessageService(IntentService)";
     private Handler h1;
     //private Handler h2 = new Handler();
-    public static final int nid = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
+    public static int nid = 0;
 
     public DelayedMessageService() {super("DelayedMessageService");}
 
@@ -57,6 +57,9 @@ public class DelayedMessageService extends IntentService {
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
         stackBuilder.addParentStack(MainActivity.class);
         stackBuilder.addNextIntent(i);
+//        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
+//        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_NO_CREATE);
+//        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_ONE_SHOT);
         PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
         Notification n = new Notification.Builder(this)
                 .setSmallIcon(R.mipmap.ic_launcher)
@@ -68,6 +71,7 @@ public class DelayedMessageService extends IntentService {
                 .setContentIntent(pendingIntent)
                 .build();
         NotificationManager nManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        nid = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
         nManager.notify(nid, n);
 
     }
