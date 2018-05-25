@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">App 1855 20180517</string>
+    <string name="app_name">App 2238 20180521</string>
+
+    <string name="btn_to_fragment">Go to Fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="btn_to_listview">Go to Starbuzz App</string>
     <string name="coffee_logo">Starbuzz App Logo</string>

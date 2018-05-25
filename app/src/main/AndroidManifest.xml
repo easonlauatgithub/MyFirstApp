@@ -4,6 +4,8 @@
     android:versionCode="3"
     android:versionName="VersionName 3">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,7 +42,27 @@
         <activity
             android:name=".DrinkCategoryActivity"
             android:label="@string/title_activity_drink_category" />
-        <activity android:name=".DrinkActivity"></activity>
+        <activity android:name=".DrinkActivity" />
+        <activity android:name=".FragmentActivity" />
+        <activity android:name=".BroadcastReceiverTestActivity" />
+
+        <!--
+        BroadcastReceiver ON all time
+        <receiver android:name="MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="ACTION123" />
+            </intent-filter>
+        </receiver>
+        -->
+        <activity android:name=".StartedServiceActivity" />
+
+        <service
+            android:name=".DelayedMessageService"
+            android:exported="false" />
+        <!-- android:exported="true" To be used by other apps -->
+        <service
+            android:name=".BackgroundMP3Service"
+            android:exported="false"></service>
     </application>
 
 </manifest>

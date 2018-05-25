@@ -1,80 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- <android.support.constraint.ConstraintLayout -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.easontesting.myfirstapp.MainActivity">
-    <!-- Send Message -->
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:ems="10"
-        android:hint="@string/edit_message"
-        android:inputType="textPersonName"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button" />
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:onClick="sendMessage"
-        android:text="@string/button_send"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintLeft_toRightOf="@+id/editText"
-        app:layout_constraintRight_toRightOf="parent" />
-    <!-- TimerActivity -->
-    <Button
-        android:id="@+id/timer_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickToTimer"
-        android:text="@string/btn_to_timer"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintLeft_toRightOf="parent"/>
-    <!-- CarParkTimer -->
-    <Button
-        android:id="@+id/car_park_timer_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickToCarParkTimer"
-        android:text="@string/btn_to_car_park_timer"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        app:layout_constraintTop_toBottomOf="@+id/timer_button"
-        app:layout_constraintLeft_toRightOf="parent"/>
-    <!-- LayoutActivity-->
-    <ImageButton
-        android:id="@+id/layout_activity_image_button"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        app:layout_constraintTop_toBottomOf="@+id/car_park_timer_button"
-        app:layout_constraintLeft_toRightOf="parent"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:src="@drawable/click1"
-        android:scaleType="fitCenter"
-        android:onClick="onClickToLayoutActivity" />
-    <!-- Starbuzz app - Three level listview -->
-    <Button
-        android:id="@+id/listview_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickToListView"
-        android:text="@string/btn_to_listview"
-        android:layout_marginLeft="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        app:layout_constraintTop_toBottomOf="@+id/layout_activity_image_button"
-        app:layout_constraintLeft_toRightOf="parent"/>
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- Send Message -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="1">
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:ems="10"
+                android:hint="@string/edit_message"
+                android:inputType="textPersonName"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"/>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:onClick="sendMessage"
+                android:text="@string/button_send"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_rowSpan="1"/>
+        </GridLayout>
+        <!-- TimerActivity -->
+        <Button
+            android:id="@+id/timer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickToTimer"
+            android:text="@string/btn_to_timer"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- CarParkTimer -->
+        <Button
+            android:id="@+id/car_park_timer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickToCarParkTimer"
+            android:text="@string/btn_to_car_park_timer"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/timer_button"
+            app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- LayoutActivity-->
+        <ImageButton
+            android:id="@+id/layout_activity_image_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintTop_toBottomOf="@+id/car_park_timer_button"
+            app:layout_constraintLeft_toRightOf="parent"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:src="@drawable/click1"
+            android:scaleType="fitCenter"
+            android:onClick="onClickToLayoutActivity" />
+        <!-- Starbuzz app - Three level listview -->
+        <Button
+            android:id="@+id/listview_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickToListView"
+            android:text="@string/btn_to_listview"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/layout_activity_image_button"
+            app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- Fragment -->
+        <Button
+            android:id="@+id/fragment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickToFragment"
+            android:text="@string/btn_to_fragment"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/listview_button"
+            app:layout_constraintLeft_toRightOf="parent"/>
+    </LinearLayout>
+</ScrollView>
+<!-- </android.support.constraint.ConstraintLayout> -->

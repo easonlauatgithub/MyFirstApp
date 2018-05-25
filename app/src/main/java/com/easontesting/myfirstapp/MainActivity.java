@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.easontesting.myfirstapp.MESSAGE";
@@ -52,4 +53,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void onClickToFragment(View view){
+        Intent i = new Intent(this, FragmentActivity.class);
+        startActivity(i);
+    }
 }
