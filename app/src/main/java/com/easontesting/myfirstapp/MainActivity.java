@@ -60,4 +60,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, StartedServiceActivity.class);
         startActivity(i);
     }
+    public void onClickToBoundService(View view){
+        Intent i = new Intent(this, BoundServiceActivity.class);
+        startActivity(i);
+    }
 }

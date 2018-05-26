@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">App 2124 20180525</string>
+    <string name="app_name">App 1448 20180526</string>
+
+    <string name="btn_to_bound_service">Go to Bound Service</string>
+    <string name="bound_service_btn1_text">Start</string>
+    <string name="bound_service_btn2_text">Stop</string>
+    <string name="bound_service_btn3_text">Reset</string>
 
     <string name="btn_to_started_service">Go to Started Service</string>
     <string name="started_service_btn_response">DelayedMessageService is created.</string>

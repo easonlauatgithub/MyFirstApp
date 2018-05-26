@@ -5,6 +5,8 @@
     android:versionName="VersionName 3">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -59,10 +61,20 @@
         <service
             android:name=".DelayedMessageService"
             android:exported="false" />
-        <!-- android:exported="true" To be used by other apps -->
+        <!-- android:exported="false" Can't be used by other apps -->
         <service
             android:name=".BackgroundMP3Service"
-            android:exported="false"></service>
+            android:exported="false" />
+
+        <activity android:name=".BoundServiceActivity" />
+
+        <service
+            android:name=".OdometerService"
+            android:enabled="true"
+            android:exported="false">
+            <!-- android:enabled="true" Can be used by this app -->
+            <!-- android:exported="false" Can't be used by other apps -->
+        </service>
     </application>
 
 </manifest>

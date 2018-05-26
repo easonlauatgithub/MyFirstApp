@@ -127,6 +127,18 @@
             android:layout_marginTop="@dimen/margin"
             app:layout_constraintTop_toBottomOf="@+id/broadcast_receiver_button"
             app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- Bound Service -->
+        <Button
+            android:id="@+id/bound_service_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickToBoundService"
+            android:text="@string/btn_to_bound_service"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            app:layout_constraintTop_toBottomOf="@+id/started_service_button"
+            app:layout_constraintLeft_toRightOf="parent"/>
 
     </LinearLayout>
 </ScrollView>
