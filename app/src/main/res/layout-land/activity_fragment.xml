@@ -20,10 +20,9 @@
         android:layout_weight="3"
         android:layout_height="match_parent"
         class="com.easontesting.myfirstapp.WorkoutDetailFragment" /> -->
-    <!-- layout-port, layout-land
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="0dp"
         android:layout_weight="3"
-        android:layout_height="match_parent"/> -->
+        android:layout_height="match_parent"/>
 </LinearLayout>

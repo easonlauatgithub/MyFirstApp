@@ -46,7 +46,6 @@ public class WorkoutListFragment extends ListFragment {
 
     public void onListItemClick(ListView listView, View itemView, int position, long id){
         Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
-        Log.e(TAG, "easontesting id: "+ id );
         if(listener != null){
             listener.itemClicked(id);
         }

@@ -8,14 +8,15 @@ import android.view.View;
 import android.widget.TextView;
 
 public class TimerActivity extends AppCompatActivity {
-    private static final String TAG2 = "TimerActivity";
+    private final String TAG = this.getClass().getSimpleName();
+    //Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
     private TextView textView1;
     private int seconds = 0;
     private boolean running;
     private boolean wasRunning;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.e(TAG2,"easontesting TimerActivity onCreate");
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
         textView1 = (TextView) findViewById(R.id.view_for_easontesting);
@@ -27,7 +28,7 @@ public class TimerActivity extends AppCompatActivity {
         runTimer();
     }
     public void runTimer(){
-        Log.e(TAG2,"easontesting TimerActivity runTimer");
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         final TextView timeView = (TextView) findViewById(R.id.time_view);
         final Handler handler = new Handler();
         handler.post(new Runnable(){
@@ -49,47 +50,53 @@ public class TimerActivity extends AppCompatActivity {
     }
     @Override
     protected void onStart() {
-        Log.e(TAG2,"easontesting TimerActivity onStart");
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         super.onStart();
-        if(wasRunning == true){
-            running = true;
-        }
+//        if(wasRunning == true){running = true;}
     }
     @Override
     protected void onResume() {
-        Log.e(TAG2,"easontesting TimerActivity onResume");
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         super.onResume();
         if(wasRunning == true){
             running = true;
         }
     }
     @Override
+    protected void onPause() {
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+        super.onPause();
+        wasRunning = running;
+//        running = false;
+    }
+    @Override
     public void onSaveInstanceState(Bundle savedInstanceState){
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+        super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putInt("seconds",seconds);
         savedInstanceState.putBoolean("running", running);
         savedInstanceState.putBoolean("wasRunning", wasRunning);
-        Log.e(TAG2,"easontesting TimerActivity onSaveInstanceState wasRunning " + wasRunning);
-    }
-    @Override
-    protected void onPause() {
-        Log.e(TAG2,"easontesting TimerActivity onPause");
-        super.onPause();
-        wasRunning = running;
-        running = false;
     }
     @Override
     protected void onStop() {
-        Log.e(TAG2,"easontesting TimerActivity onStop");
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         super.onStop();
-        wasRunning = running;
-        running = false;
+//        wasRunning = running;
+//        running = false;
     }
     protected void onDestory() {
-        Log.e(TAG2,"easontesting TimerActivity onDestory");
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
     }
     public void onClickStart(View view){
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         running = true;
     }
-    public void onClickStop(View view) { running = false; }
-    public void onClickReset(View view) {running = false; seconds = 0; }
+    public void onClickStop(View view) {
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+        running = false;
+    }
+    public void onClickReset(View view) {
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+        running = false; seconds = 0;
+    }
 }

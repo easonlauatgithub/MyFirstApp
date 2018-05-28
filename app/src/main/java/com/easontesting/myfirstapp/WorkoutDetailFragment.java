@@ -11,12 +11,32 @@ import android.widget.TextView;
 
 public class WorkoutDetailFragment extends Fragment {
     private final String TAG = this.getClass().getSimpleName();
+    //Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
     private long workoutId;
+
+    public void onAttach(Bundle savedInstanceState){
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+    }
+    @Override
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+        if(savedInstanceState != null){
+            workoutId = savedInstanceState.getLong("workoutId");
+        }
         return inflater.inflate(R.layout.fragment_workout_detail, container, false);
     }
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+    }
+
     @Override
     public void onStart(){
         Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
@@ -29,6 +49,22 @@ public class WorkoutDetailFragment extends Fragment {
             title.setText(workout.getName());
             desc.setText(workout.getDescription());
         }
+    }
+    @Override
+    public void onPause() {
+        Log.e(TAG, "easontesting " + TAG + ": " + Thread.currentThread().getStackTrace()[2].getMethodName());
+        super.onPause();
+    }
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        Log.e(TAG, "easontesting " + TAG + ": " + Thread.currentThread().getStackTrace()[2].getMethodName());
+        //super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putLong("workoutId", workoutId);
+    }
+    @Override
+    public void onStop() {
+        Log.e(TAG, "easontesting " + TAG + ": " + Thread.currentThread().getStackTrace()[2].getMethodName());
+        super.onStop();
     }
     public void setWorkout(long id){
         Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );

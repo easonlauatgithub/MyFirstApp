@@ -72,9 +72,12 @@
             android:name=".OdometerService"
             android:enabled="true"
             android:exported="false">
+
             <!-- android:enabled="true" Can be used by this app -->
             <!-- android:exported="false" Can't be used by other apps -->
         </service>
+
+        <activity android:name=".WorkoutDetailIndependentActivity"></activity>
     </application>
 
 </manifest>
