@@ -13,16 +13,16 @@
         android:layout_weight="2"
         android:layout_height="match_parent"
         class="com.easontesting.myfirstapp.WorkoutListFragment" />
-    <!-- Replace WorkoutDetailFragment instead of update
+    <!-- activity_detail.xml is reset but can't show on fragment id/detail_frag, so use FrameLayout
     <fragment
         android:id="@+id/detail_frag"
         android:layout_width="0dp"
         android:layout_weight="3"
         android:layout_height="match_parent"
-        class="com.easontesting.myfirstapp.WorkoutDetailFragment" />  -->
+        class="com.easontesting.myfirstapp.WorkoutDetailFragment" /> -->
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="0dp"
         android:layout_weight="3"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 </LinearLayout>

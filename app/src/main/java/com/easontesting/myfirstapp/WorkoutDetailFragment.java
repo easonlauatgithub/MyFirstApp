@@ -1,48 +1,37 @@
 package com.easontesting.myfirstapp;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class WorkoutDetailFragment extends Fragment {
+    private final String TAG = this.getClass().getSimpleName();
     private long workoutId;
-    public WorkoutDetailFragment() {/* Required empty public constructor */}
-
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
+        return inflater.inflate(R.layout.fragment_workout_detail, container, false);
+    }
     @Override
     public void onStart(){
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         super.onStart();
-        Workout workout = Workout.workouts[(int)workoutId];
-        View v = getView();
-        if(v!=null){
-            TextView title = (TextView) v.findViewById(R.id.textTitle);
+        View view = getView(); //Fragment is not a view, cannot directly findViewById, so get root view id:detail_frag first
+        if(view!=null){
+            TextView title = (TextView) view.findViewById(R.id.textTitle);
+            TextView desc = (TextView) view.findViewById(R.id.textDescription);
+            Workout workout = Workout.workouts[(int) workoutId];
             title.setText(workout.getName());
-            TextView description = (TextView) v.findViewById(R.id.textDescription);
-            description.setText(workout.getDescription());
+            desc.setText(workout.getDescription());
         }
     }
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState){
-        savedInstanceState.putLong("workoutId", workoutId);
-    }
     public void setWorkout(long id){
+        Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         this.workoutId = id;
     }
 }
-/*
-* F - fragment
-* A - activity
-* onAttach() - F connects with A
-* onCreate() - F onCreate()
-* onCreateView() - F uses layout inflater
-* onActivityCreated() - after A onCreate()
-* onStart() - F becomes visible
-* onResume() - F becomes visible and on focus
-* onPause() - F becomes visible and not on focus
-* onStop() - F becomes invisible
-* onDestroyView() - F clears view
-* onDestroy - F clears all
-* onDetach - F disconnects with A
-*/

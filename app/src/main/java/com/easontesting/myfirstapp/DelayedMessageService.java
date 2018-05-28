@@ -55,7 +55,7 @@ public class DelayedMessageService extends IntentService {
         /* SHOW NOTIFICATION */
         Intent i = new Intent(this, StartedServiceActivity.class);
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(MainActivity.class);
+        //stackBuilder.addParentStack(MainActivity.class);
         stackBuilder.addNextIntent(i);
 //        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_CANCEL_CURRENT);
 //        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_NO_CREATE);
