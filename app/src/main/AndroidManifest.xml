@@ -15,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -56,6 +56,7 @@
         </receiver>
         -->
         <activity android:name=".StartedServiceActivity" />
+
         <service
             android:name=".DelayedMessageService"
             android:exported="false" />
@@ -63,7 +64,9 @@
         <service
             android:name=".BackgroundMP3Service"
             android:exported="false" />
+
         <activity android:name=".BoundServiceActivity" />
+
         <service
             android:name=".OdometerService"
             android:enabled="true"
@@ -72,11 +75,21 @@
             <!-- android:enabled="true" Can be used by this app -->
             <!-- android:exported="false" Can't be used by other apps -->
         </service>
+
         <activity android:name=".WorkoutDetailIndependentActivity" />
         <activity android:name=".SendMessageActivity" />
-        <activity
-            android:name=".ActionBarActivity"
-            android:label="Action Bar - AndroidManifest"/>
+        <activity android:name=".ActionBarActivity"
+            android:label="@string/btn_to_actionbar"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".OrderActivity"
+            android:label="@string/action_create_order"
+            android:parentActivityName=".ActionBarActivity">
+            <!-- android:parentActivityName for API 16 or above -->
+            <!-- <meta-data for API below 16 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActionBarActivity"/>
+        </activity>
     </application>
 
 </manifest>

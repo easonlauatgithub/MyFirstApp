@@ -1,13 +1,13 @@
 package com.easontesting.myfirstapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-//import android.app.Activity;
+//import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity { //res/values/styles
-//public class MainActivity extends Activity {
+//public class MainActivity extends AppCompatActivity { //res/values/styles
+public class MainActivity extends Activity {
     public static final String EXTRA_MESSAGE = "com.easontesting.myfirstapp.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {

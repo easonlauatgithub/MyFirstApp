@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">App 1620 20180529</string>
+    <string name="app_name">App 1736 20180529</string>
 
     <string name="btn_to_actionbar">Action Bar</string>
     <string name="action_settings">Action Settings</string>
+    <string name="action_create_order">Create Order</string>
+    <string name="action_share">Share</string>
 
     <string name="btn_to_bound_service">Bound Service</string>
     <string name="bound_service_btn1_text">Start</string>

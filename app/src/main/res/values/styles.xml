@@ -1,14 +1,14 @@
 <resources>
-    <!-- Base application theme  -->
+    <!-- Base application theme
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-    <!--  Theme added 20180529 1404
+    </style>-->
+    <!--  Theme added 20180529 1404 -->
     <style name="AppTheme" parent="android:Theme.Holo.Light">
         <item name="android:background">@color/colorHolo</item>
-    </style> -->
+    </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
