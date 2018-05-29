@@ -1,7 +1,9 @@
 package com.easontesting.myfirstapp;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,11 +25,21 @@ public class WorkoutDetailFragment extends Fragment {
         Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
     }
 
+    @TargetApi(17)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         Log.e(TAG, "easontesting "+TAG+": "+ Thread.currentThread().getStackTrace()[2].getMethodName() );
         if(savedInstanceState != null){
             workoutId = savedInstanceState.getLong("workoutId");
+        }
+        if(savedInstanceState == null) {
+            StopwatchFragment frag_stopwatch = new StopwatchFragment();
+            //FragmentTransaction ft = getFragmentManager().beginTransaction();
+            FragmentTransaction ft = getChildFragmentManager().beginTransaction();
+            ft.replace(R.id.stopwatch_container, frag_stopwatch);
+            ft.addToBackStack(null);
+            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.commit(); //Trigger onCreateView, onStart of WorkoutDetailFragment
         }
         return inflater.inflate(R.layout.fragment_workout_detail, container, false);
     }

@@ -1,36 +1,22 @@
 package com.easontesting.myfirstapp;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+//import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //res/values/styles
+//public class MainActivity extends Activity {
     public static final String EXTRA_MESSAGE = "com.easontesting.myfirstapp.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    /* Called when the user taps the Send button */
-    public void sendMessage(View view){
-        EditText editText = (EditText) findViewById(R.id.editText);
-        String message = editText.getText().toString();
-        //Intent intent = new Intent(this, DisplayMessageActivity.class);
-        //intent.putExtra(EXTRA_MESSAGE, message);
-        Intent i1 = new Intent(Intent.ACTION_SEND);
-        i1.setType("text/plain");
-        i1.putExtra(Intent.EXTRA_TEXT, message);
-        String title = getString(R.string.chooserTitle);
-        Intent i2 = Intent.createChooser(i1, title);
-        //startActivity(intent);
-        //startActivity(i1);
-        startActivity(i2);
+    public void onClickToSendMessage(View view){
+        Intent intent = new Intent(this, SendMessageActivity.class);
+        startActivity(intent);
     }
     public void onClickToTimer(View view){
         Intent intent = new Intent(this, TimerActivity.class);
@@ -62,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickToBoundService(View view){
         Intent i = new Intent(this, BoundServiceActivity.class);
+        startActivity(i);
+    }
+    public void onClickToActionBar(View view){
+        Intent i = new Intent(this, ActionBarActivity.class);
         startActivity(i);
     }
 }

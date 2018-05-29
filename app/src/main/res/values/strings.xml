@@ -1,18 +1,21 @@
 <resources>
-    <string name="app_name">App 1532 20180527</string>
+    <string name="app_name">App 1620 20180529</string>
 
-    <string name="btn_to_bound_service">Go to Bound Service</string>
+    <string name="btn_to_actionbar">Action Bar</string>
+    <string name="action_settings">Action Settings</string>
+
+    <string name="btn_to_bound_service">Bound Service</string>
     <string name="bound_service_btn1_text">Start</string>
     <string name="bound_service_btn2_text">Stop</string>
     <string name="bound_service_btn3_text">Reset</string>
 
-    <string name="btn_to_started_service">Go to Started Service</string>
+    <string name="btn_to_started_service">Started Service</string>
     <string name="started_service_btn_response">DelayedMessageService is created.</string>
     <string name="started_service_btn1_text">Click to create Start Service (DelayedMessageService)</string>
     <string name="started_service_btn_start_mp3_text">Play MP3</string>
     <string name="started_service_btn_stop_mp3_text">Stop MP3</string>
 
-    <string name="btn_to_broadcast_receiver">Go to BroadcastReceiver/ Notification</string>
+    <string name="btn_to_broadcast_receiver">BroadcastReceiver/ Notification</string>
     <string name="hello_broadcast_receiver">Hello BroadcastReceiver</string>
     <string name="Notification_1">Notification 1</string>
     <string name="Notification_2">Notification 2</string>
@@ -21,10 +24,10 @@
     <string name="Notification_5">Notification 5</string>
 
 
-    <string name="btn_to_fragment">Go to Fragment</string>
+    <string name="btn_to_fragment">Fragment</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="btn_to_listview">Go to Starbuzz App (SQLite)</string>
+    <string name="btn_to_listview">Starbuzz App (SQLite)</string>
     <string name="coffee_logo">Starbuzz App Logo</string>
     <string-array name="options">
         <item>Drinks</item>
@@ -34,17 +37,17 @@
     <string name="title_activity_drink_category">DrinkCategoryActivity Label</string>
     <string name="favorite">Favorite</string>
 
-    <string name="layout_activity_button">Go to LayoutActivity</string>
+    <string name="layout_activity_button">Layout</string>
     <string name="layout_activity_image_button">Image Button of LayoutActivity</string>
 
-    <string name="btn_to_car_park_timer">Go to 停車場計時器</string>
+    <string name="btn_to_car_park_timer">停車場計時器</string>
     <string name="car_park_start_date">入場日期</string>
     <string name="car_park_start_time">入場時間</string>
     <string name="car_park_end_date">離埸日期</string>
     <string name="car_park_end_time">離埸時間</string>
     <string name="car_park_charge_message">每小時收費</string>
 
-    <string name="btn_to_timer">Go to Timer</string>
+    <string name="btn_to_timer">Timer</string>
     <string name="start">start</string>
     <string name="stop">stop</string>
     <string name="reset">reset</string>
@@ -53,6 +56,7 @@
     <string name="title_activity_find_beer">FindBeerActivity</string>
     <string name="rotate_to_landscape">landscape</string>
 
+    <string name="btn_to_send_message">Message Sender</string>
     <string name="edit_message">Enter a message</string>
     <string name="text_view">TextView</string>
     <string name="button_send">Send</string>

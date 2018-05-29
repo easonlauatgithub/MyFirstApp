@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class CarParkTimer extends AppCompatActivity {
+    public class CarParkTimer extends AppCompatActivity {
     private static final String TAG3 = "CarParkTimer";
 //    private Button doSetStartDate;
 //    private Button doSetStartTime;

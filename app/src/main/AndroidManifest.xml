@@ -15,10 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -47,7 +47,6 @@
         <activity android:name=".DrinkActivity" />
         <activity android:name=".FragmentActivity" />
         <activity android:name=".BroadcastReceiverTestActivity" />
-
         <!--
         BroadcastReceiver ON all time
         <receiver android:name="MyBroadcastReceiver">
@@ -57,7 +56,6 @@
         </receiver>
         -->
         <activity android:name=".StartedServiceActivity" />
-
         <service
             android:name=".DelayedMessageService"
             android:exported="false" />
@@ -65,9 +63,7 @@
         <service
             android:name=".BackgroundMP3Service"
             android:exported="false" />
-
         <activity android:name=".BoundServiceActivity" />
-
         <service
             android:name=".OdometerService"
             android:enabled="true"
@@ -76,8 +72,11 @@
             <!-- android:enabled="true" Can be used by this app -->
             <!-- android:exported="false" Can't be used by other apps -->
         </service>
-
-        <activity android:name=".WorkoutDetailIndependentActivity"></activity>
+        <activity android:name=".WorkoutDetailIndependentActivity" />
+        <activity android:name=".SendMessageActivity" />
+        <activity
+            android:name=".ActionBarActivity"
+            android:label="Action Bar - AndroidManifest"/>
     </application>
 
 </manifest>

@@ -39,10 +39,10 @@ public class FragmentActivity extends AppCompatActivity implements WorkoutListFr
             //it reset the activity_detail.xml, but can't show on fragment id/detail_frag, so use FrameLayout
             //FrameLayout id/fragment_container
             Log.e(TAG, "easontesting " + TAG + ": " + new Throwable().getStackTrace()[0].getMethodName() + " FragmentLayout id/fragment_container ");
-            WorkoutDetailFragment details = new WorkoutDetailFragment();
-            details.setWorkout(id);
+            WorkoutDetailFragment frag_details = new WorkoutDetailFragment();
+            frag_details.setWorkout(id);
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-            ft.replace(R.id.fragment_container, details);
+            ft.replace(R.id.fragment_container, frag_details);
             ft.addToBackStack(null);
             ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
             ft.commit(); //Trigger onCreateView, onStart of WorkoutDetailFragment

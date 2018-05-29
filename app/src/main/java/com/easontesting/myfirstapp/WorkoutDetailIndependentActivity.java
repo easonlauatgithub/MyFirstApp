@@ -13,7 +13,7 @@ public class WorkoutDetailIndependentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_detail_independent);
         int workoutId = (int) getIntent().getExtras().get(WORKOUT_ID);
-        WorkoutDetailFragment detail_independent_frag = (WorkoutDetailFragment) getFragmentManager().findFragmentById(R.id.detail_independent_frag);
-        detail_independent_frag.setWorkout(workoutId);
+        WorkoutDetailFragment f1 = (WorkoutDetailFragment) getFragmentManager().findFragmentById(R.id.detail_independent_frag);
+        f1.setWorkout(workoutId);
     }
 }
