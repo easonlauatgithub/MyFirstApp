@@ -167,7 +167,21 @@
             android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/bound_service_button"
             app:layout_constraintLeft_toRightOf="parent"/>
-
+        <!-- Matching game -->
+        <Button
+            android:id="@+id/matching_game_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickToMatchingGame"
+            android:text="@string/btn_to_matching_game"
+            android:drawableStart="@drawable/btn_matching_game"
+            android:drawableLeft="@drawable/btn_matching_game"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/actionbar_button"
+            app:layout_constraintLeft_toRightOf="parent"/>
         <ImageView
             android:id="@+id/footer_banner"
             android:layout_width="match_parent"
@@ -175,7 +189,7 @@
             android:src="@drawable/footer_banner"
             android:scaleType="fitXY"
             android:layout_marginTop="@dimen/margin"
-            app:layout_constraintTop_toBottomOf="@+id/bound_service_button"
+            app:layout_constraintTop_toBottomOf="@+id/matching_game_button"
             app:layout_constraintLeft_toRightOf="parent"/>
     </LinearLayout>
 </ScrollView>

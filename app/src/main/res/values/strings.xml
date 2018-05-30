@@ -1,5 +1,31 @@
 <resources>
-    <string name="app_name">App 1736 20180529</string>
+    <string name="app_name">App 1627 20180530</string>
+
+    <string name="btn_to_matching_game">Matching Game</string>
+
+    <string name="btn_to_navigation_drawer">Navigation Drawer</string>
+    <string name="title_top">Top fragment</string>
+    <string-array name="titles">
+        <item>Home</item>
+        <item>Houston Rocket</item>
+        <item>Cleveland Cavalier</item>
+        <item>Golden State Warrier</item>
+    </string-array>
+    <string-array name="pizzas">
+        <item>Stephen Curry</item>
+        <item>Kelvin Durant</item>
+        <item>Klay Thompson</item>
+    </string-array>
+    <string-array name="pasta">
+        <item>Leborn James</item>
+        <item>Kelvin Love</item>
+    </string-array>
+    <string-array name="stores">
+        <item>Chris Paul</item>
+        <item>James Harden</item>
+    </string-array>
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
 
     <string name="btn_to_actionbar">Action Bar</string>
     <string name="action_settings">Action Settings</string>

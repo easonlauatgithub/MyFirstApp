@@ -1,13 +1,13 @@
 package com.easontesting.myfirstapp;
 
 import android.content.Intent;
-//import android.support.v7.app.AppCompatActivity;
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
+//import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-//public class MainActivity extends AppCompatActivity { //res/values/styles
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity { //res/values/styles
+//public class MainActivity extends Activity {
     public static final String EXTRA_MESSAGE = "com.easontesting.myfirstapp.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,10 @@ public class MainActivity extends Activity {
     }
     public void onClickToActionBar(View view){
         Intent i = new Intent(this, ActionBarActivity.class);
+        startActivity(i);
+    }
+    public void onClickToMatchingGame(View view){
+        Intent i = new Intent(this, MatchingGameActivity.class);
         startActivity(i);
     }
 }

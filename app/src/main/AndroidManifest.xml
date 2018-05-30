@@ -78,18 +78,23 @@
 
         <activity android:name=".WorkoutDetailIndependentActivity" />
         <activity android:name=".SendMessageActivity" />
-        <activity android:name=".ActionBarActivity"
+        <activity
+            android:name=".ActionBarActivity"
             android:label="@string/btn_to_actionbar"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".OrderActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".OrderActivity"
             android:label="@string/action_create_order"
-            android:parentActivityName=".ActionBarActivity">
+            android:parentActivityName=".ActionBarActivity"
+            android:theme="@style/AppTheme2">
+
             <!-- android:parentActivityName for API 16 or above -->
             <!-- <meta-data for API below 16 -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ActionBarActivity"/>
+                android:value=".ActionBarActivity" />
         </activity>
+        <activity android:name=".MatchingGameActivity"></activity>
     </application>
 
 </manifest>
