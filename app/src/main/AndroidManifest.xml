@@ -94,7 +94,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ActionBarActivity" />
         </activity>
-        <activity android:name=".MatchingGameActivity"></activity>
+        <activity android:name=".MatchingGameActivity"
+            android:label="@string/btn_to_matching_game"/>
     </application>
 
 </manifest>

@@ -1,7 +1,14 @@
 <resources>
-    <string name="app_name">App 1627 20180530</string>
+    <string name="app_name">App 1526 20180601</string>
 
     <string name="btn_to_matching_game">Matching Game</string>
+    <string name="mg_content_description">card</string>
+    <string-array name="image_file_names">
+        <item>mg_colour1</item>
+        <item>mg_colour2</item>
+        <item>mg_colour3</item>
+        <item>mg_colour4</item>
+    </string-array>
 
     <string name="btn_to_navigation_drawer">Navigation Drawer</string>
     <string name="title_top">Top fragment</string>
