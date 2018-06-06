@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App 1526 20180601</string>
+    <string name="app_name">App 1531 20180606</string>
 
     <string name="btn_to_matching_game">Matching Game</string>
     <string name="mg_content_description">card</string>
@@ -14,9 +14,9 @@
     <string name="title_top">Top fragment</string>
     <string-array name="titles">
         <item>Home</item>
+        <item>Golden State Warrier</item>
         <item>Houston Rocket</item>
         <item>Cleveland Cavalier</item>
-        <item>Golden State Warrier</item>
     </string-array>
     <string-array name="pizzas">
         <item>Stephen Curry</item>

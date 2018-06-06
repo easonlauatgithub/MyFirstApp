@@ -1,68 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mg_grid_layout"
+    android:id="@+id/mg_gridLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.easontesting.myfirstapp.MatchingGameActivity"
-    android:orientation="horizontal"
-    android:columnCount="4"
-    android:rowCount="2">
+    android:layout_column="4"
+    android:layout_row="2">
+
         <ImageButton
             android:id="@+id/mg_pic_0"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
             android:background="@drawable/mg_bg"
             android:contentDescription="@string/mg_content_description"
-            android:onClick="onCLickPicture"
-            android:scaleType="fitXY" />
-        <ImageButton android:id="@+id/mg_pic_1"
-            android:contentDescription="@string/mg_content_description"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:onClick="onCLickPicture" />
+
+        <ImageButton
+            android:id="@+id/mg_pic_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
             android:background="@drawable/mg_bg"
-            android:scaleType="fitXY"
-            android:onClick="onCLickPicture"/>
-        <ImageButton android:id="@+id/mg_pic_2"
             android:contentDescription="@string/mg_content_description"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:onClick="onCLickPicture" />
+
+        <ImageButton
+            android:id="@+id/mg_pic_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
             android:background="@drawable/mg_bg"
-            android:scaleType="fitXY"
-            android:onClick="onCLickPicture"/>
-        <ImageButton android:id="@+id/mg_pic_3"
             android:contentDescription="@string/mg_content_description"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:onClick="onCLickPicture" />
+
+        <ImageButton
+            android:id="@+id/mg_pic_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="3"
             android:background="@drawable/mg_bg"
-            android:scaleType="fitXY"
-            android:onClick="onCLickPicture"/>
-        <ImageButton android:id="@+id/mg_pic_4"
             android:contentDescription="@string/mg_content_description"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:onClick="onCLickPicture" />
+
+        <ImageButton
+            android:id="@+id/mg_pic_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
             android:background="@drawable/mg_bg"
-            android:scaleType="fitXY"
-            android:onClick="onCLickPicture"/>
-        <ImageButton android:id="@+id/mg_pic_5"
             android:contentDescription="@string/mg_content_description"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:onClick="onCLickPicture" />
+
+        <ImageButton
+            android:id="@+id/mg_pic_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
             android:background="@drawable/mg_bg"
-            android:scaleType="fitXY"
-            android:onClick="onCLickPicture"/>
-        <ImageButton android:id="@+id/mg_pic_6"
             android:contentDescription="@string/mg_content_description"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:onClick="onCLickPicture" />
+
+        <ImageButton
+            android:id="@+id/mg_pic_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
             android:background="@drawable/mg_bg"
-            android:scaleType="fitXY"
-            android:onClick="onCLickPicture"/>
-        <ImageButton android:id="@+id/mg_pic_7"
             android:contentDescription="@string/mg_content_description"
-            android:layout_width="@dimen/width_matching_game_image_button"
-            android:layout_height="@dimen/height_matching_game_image_button"
+            android:onClick="onCLickPicture" />
+
+        <ImageButton
+            android:id="@+id/mg_pic_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="3"
             android:background="@drawable/mg_bg"
-            android:scaleType="fitXY"
-            android:onClick="onCLickPicture"/>
+            android:contentDescription="@string/mg_content_description"
+            android:onClick="onCLickPicture" />
 </GridLayout>

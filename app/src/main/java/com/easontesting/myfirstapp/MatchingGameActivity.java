@@ -2,13 +2,18 @@ package com.easontesting.myfirstapp;
 
 import android.annotation.TargetApi;
 import android.content.DialogInterface;
+import android.graphics.Point;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
+import android.view.ViewParent;
+import android.view.ViewTreeObserver;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -17,6 +22,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+
+import android.widget.ImageView;
 
 @TargetApi(16)
 public class MatchingGameActivity extends AppCompatActivity {
@@ -41,6 +48,27 @@ public class MatchingGameActivity extends AppCompatActivity {
         arrImgId = funcGenImageIdArray(arrImageFileNameFromXMLSource);//arrImgId - an array storing Image id in random
         arrBtnId = funcGetImageButtonIdArray();//arrBtnId - an array storing Image Button Id
         funcSetImage(arrBtnId, arrImgId);
+        funcSetLayout();
+    }
+
+    public void funcSetLayout(){
+        final GridLayout layout = findViewById(R.id.mg_gridLayout);
+        ViewTreeObserver o = layout.getViewTreeObserver();
+        o.addOnGlobalLayoutListener(
+                new ViewTreeObserver.OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        layout.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                        int height_layout = layout.getHeight();
+                        int width_layout = layout.getWidth();
+                        int numOfChild = layout.getChildCount();
+                        for(int i=0; i<numOfChild; i++){
+                            View v = layout.getChildAt(i);
+                            v.setMinimumWidth(width_layout/4);
+                            v.setMinimumHeight(height_layout/2);
+                        }
+                    }
+                });
     }
 
     public void onCLickPicture(View v) {
@@ -162,6 +190,7 @@ public class MatchingGameActivity extends AppCompatActivity {
             for(int i=0; i<lenArrBtnId; i++){
                 ImageButton _imgBtn = findViewById(arrBtnId[i]);
                 _imgBtn.setImageResource(arrImgFileId[i]);
+                _imgBtn.setScaleType(ImageView.ScaleType.FIT_XY);
                 _imgBtn.setImageAlpha(0);
             }
         }
