@@ -93,8 +93,10 @@ public class ActionBarActivity extends Activity {
                     FragmentManager manager2 = getFragmentManager();
                     Fragment fragment2 = manager2.findFragmentByTag("visible_fragment");
                     if(fragment2 instanceof NDrawerTopFragment){currentPosition=0;}
-                    if(fragment2 instanceof NDrawerPizzaFragment){currentPosition=1;}
-                    if(fragment2 instanceof NDrawerPastaFragment){currentPosition=2;}
+                    //if(fragment2 instanceof NDrawerPizzaFragment){currentPosition=1;}
+                    if(fragment2 instanceof PizzaMaterialFragment){currentPosition=1;}
+                    //if(fragment2 instanceof NDrawerPastaFragment){currentPosition=2;}
+                    if(fragment2 instanceof PastaMaterialFragment){currentPosition=2;}
                     if(fragment2 instanceof NDrawerStoresFragment){currentPosition=3;}
                     setActionBarTitle(currentPosition);
                     drawerList.setItemChecked(currentPosition, true);
@@ -115,10 +117,12 @@ public class ActionBarActivity extends Activity {
                 fragment = new NDrawerTopFragment();
                 break;
             case 1:
-                fragment = new NDrawerPizzaFragment();
+                //fragment = new NDrawerPizzaFragment();
+                fragment = new PizzaMaterialFragment();
                 break;
             case 2:
-                fragment = new NDrawerPastaFragment();
+                //fragment = new NDrawerPastaFragment();
+                fragment = new PastaMaterialFragment();
                 break;
             case 3:
                 fragment = new NDrawerStoresFragment();
