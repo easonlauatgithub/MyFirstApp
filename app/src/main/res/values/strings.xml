@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">App 1531 20180606</string>
+    <string name="app_name">App 0929 20180607</string>
+
+    <string name="btn_to_webview">WebView</string>
+    <string name="wv_editext">URL here</string>
+    <string name="wv_btn">Search</string>
 
     <string name="btn_to_matching_game">Matching Game</string>
     <string name="mg_content_description">card</string>

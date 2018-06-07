@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -94,8 +95,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ActionBarActivity" />
         </activity>
-        <activity android:name=".MatchingGameActivity"
-            android:label="@string/btn_to_matching_game"/>
+        <activity
+            android:name=".MatchingGameActivity"
+            android:label="@string/btn_to_matching_game" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>

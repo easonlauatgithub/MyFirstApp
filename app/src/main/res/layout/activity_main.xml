@@ -17,21 +17,34 @@
             android:layout_height="match_parent"
             android:src="@drawable/top_banner"
             android:scaleType="fitXY"/>
-        <!-- Matching game -->
+        <!-- WebView -->
         <Button
-            android:id="@+id/matching_game_button"
+            android:id="@+id/webview_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
-            android:drawableLeft="@drawable/mg_icon"
-            android:drawableStart="@drawable/mg_icon"
+            android:drawableLeft="@drawable/btn_webview"
+            android:drawableStart="@drawable/btn_webview"
             android:gravity="center"
-            android:onClick="onClickToMatchingGame"
-            android:text="@string/btn_to_matching_game"
-            app:layout_constraintLeft_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top_banner" />
+            android:onClick="onClickToWebView"
+            android:text="@string/btn_to_webview"
+            app:layout_constraintLeft_toRightOf="parent" />
+        <!-- Action Bar -->
+        <Button
+            android:id="@+id/actionbar_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickToActionBar"
+            android:text="@string/btn_to_actionbar"
+            android:drawableStart="@drawable/btn_action_bar"
+            android:drawableLeft="@drawable/btn_action_bar"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Send Message -->
         <Button
             android:id="@+id/btn_send_message"
@@ -45,7 +58,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/matching_game_button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- TimerActivity -->
         <Button
@@ -60,7 +72,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- CarParkTimer -->
         <Button
@@ -76,7 +87,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/timer_button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- LayoutActivity -->
         <Button
@@ -91,7 +101,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/car_park_timer_button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Starbuzz app - Three level listview -->
         <Button
@@ -106,7 +115,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/layout_activity_image_button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Fragment -->
         <Button
@@ -121,7 +129,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/listview_button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- BroadcastReceiver -->
         <Button
@@ -136,7 +143,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Started Service -->
         <Button
@@ -151,7 +157,6 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/broadcast_receiver_button"
             app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Bound Service -->
         <Button
@@ -166,23 +171,21 @@
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/started_service_button"
             app:layout_constraintLeft_toRightOf="parent"/>
-        <!-- Action Bar -->
+        <!-- Matching game -->
         <Button
-            android:id="@+id/actionbar_button"
+            android:id="@+id/matching_game_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onClickToActionBar"
-            android:text="@string/btn_to_actionbar"
-            android:drawableStart="@drawable/btn_action_bar"
-            android:drawableLeft="@drawable/btn_action_bar"
             android:layout_marginLeft="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
+            android:drawableLeft="@drawable/mg_icon"
+            android:drawableStart="@drawable/mg_icon"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/bound_service_button"
-            app:layout_constraintLeft_toRightOf="parent"/>
+            android:onClick="onClickToMatchingGame"
+            android:text="@string/btn_to_matching_game"
+            app:layout_constraintLeft_toRightOf="parent" />
         <ImageView
             android:id="@+id/footer_banner"
             android:layout_width="match_parent"
@@ -190,7 +193,6 @@
             android:src="@drawable/footer_banner"
             android:scaleType="fitXY"
             android:layout_marginTop="@dimen/margin"
-            app:layout_constraintTop_toBottomOf="@+id/actionbar_button"
             app:layout_constraintLeft_toRightOf="parent"/>
     </LinearLayout>
 </ScrollView>

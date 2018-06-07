@@ -59,4 +59,8 @@ public class MainActivity extends AppCompatActivity { //res/values/styles
         Intent i = new Intent(this, MatchingGameActivity.class);
         startActivity(i);
     }
+    public void onClickToWebView(View view){
+        Intent i = new Intent(this, WebViewActivity.class);
+        startActivity(i);
+    }
 }
