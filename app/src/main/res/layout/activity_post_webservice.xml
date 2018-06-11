@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.easontesting.myfirstapp.PostWebserviceActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- return value -->
+    <TextView android:id="@+id/pws_tv_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_tv_return"
+        android:layout_marginBottom="@dimen/margin"/>
+    <!-- click to connect -->
+    <Button android:id="@+id/pws_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_click"
+        android:onClick="onClickToStart"
+        android:layout_marginBottom="@dimen/margin" />
+    <!-- url -->
+    <TextView
+        android:id="@+id/pws_label_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/pws_label_url"
+        android:textAppearance="?android:attr/textAppearance" />
+    <Spinner
+        android:id="@+id/pws_value_url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        android:entries="@array/pws_arr_url"
+        android:layout_marginBottom="@dimen/margin"/>
+    <!-- Http method -->
+    <TextView android:id="@+id/pws_label_http_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_label_http_method"
+        android:textAppearance="?android:attr/textAppearance"
+        android:gravity="center"/>
+    <CheckBox
+        android:id="@+id/pws_value_http_method"
+        android:onClick="onClickCheckBoxHttpMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_value_http_method"
+        android:layout_marginBottom="@dimen/margin"/>
+    <!-- RequestProperty ContentType -->
+    <TextView android:id="@+id/pws_label_rp_ct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_label_rp_ct"
+        android:textAppearance="?android:attr/textAppearance"
+        android:gravity="center"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin">
+        <RadioButton
+            android:onClick="onSelectRadioButtonForRequestPropertyContentType"
+            android:id="@+id/pws_rp_ct_1"
+            android:text="@string/pws_rp_ct_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:onClick="onSelectRadioButtonForRequestPropertyContentType"
+            android:id="@+id/pws_rp_ct_2"
+            android:text="@string/pws_rp_ct_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <!-- email -->
+    <TextView android:id="@+id/pws_label_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_label_email"
+        android:textAppearance="?android:attr/textAppearance"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/pws_value_email"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_value_email"
+        android:textAppearance="?android:attr/textAppearance"
+        android:layout_marginBottom="@dimen/margin"/>
+    <!-- surname -->
+    <TextView android:id="@+id/pws_label_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_label_surname"
+        android:textAppearance="?android:attr/textAppearance"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/pws_value_surname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_value_surname"
+        android:textAppearance="?android:attr/textAppearance"
+        android:layout_marginBottom="@dimen/margin" />
+    <!-- givenName -->
+    <TextView android:id="@+id/pws_label_givenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_label_givenName"
+        android:textAppearance="?android:attr/textAppearance"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/pws_value_givenName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pws_value_givenName"
+        android:textAppearance="?android:attr/textAppearance"
+        android:layout_marginBottom="@dimen/margin"/>
+</LinearLayout>
+

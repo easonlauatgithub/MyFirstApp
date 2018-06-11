@@ -63,4 +63,8 @@ public class MainActivity extends AppCompatActivity { //res/values/styles
         Intent i = new Intent(this, WebViewActivity.class);
         startActivity(i);
     }
+    public void onClickToPostWebservice(View view){
+        Intent i = new Intent(this, PostWebserviceActivity.class);
+        startActivity(i);
+    }
 }

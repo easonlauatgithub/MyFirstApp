@@ -98,7 +98,8 @@
         <activity
             android:name=".MatchingGameActivity"
             android:label="@string/btn_to_matching_game" />
-        <activity android:name=".WebViewActivity"></activity>
+        <activity android:name=".WebViewActivity" />
+        <activity android:name=".PostWebserviceActivity"></activity>
     </application>
 
 </manifest>
