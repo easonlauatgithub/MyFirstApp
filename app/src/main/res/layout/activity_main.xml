@@ -17,20 +17,20 @@
             android:layout_height="match_parent"
             android:src="@drawable/top_banner"
             android:scaleType="fitXY"/>
-        <!-- Post webservice -->
+        <!-- Started Service -->
         <Button
-            android:id="@+id/post_webservice_button"
+            android:id="@+id/started_service_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClickToStartedService"
+            android:text="@string/btn_to_started_service"
+            android:drawableStart="@drawable/btn_started_service"
+            android:drawableLeft="@drawable/btn_started_service"
             android:layout_marginLeft="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"
-            android:drawableLeft="@drawable/btn_post_webservice"
-            android:drawableStart="@drawable/btn_post_webservice"
             android:gravity="center"
-            android:onClick="onClickToPostWebservice"
-            android:text="@string/btn_to_post_webservice"
-            app:layout_constraintLeft_toRightOf="parent" />
+            app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Matching game -->
         <Button
             android:id="@+id/matching_game_button"
@@ -44,6 +44,20 @@
             android:gravity="center"
             android:onClick="onClickToMatchingGame"
             android:text="@string/btn_to_matching_game"
+            app:layout_constraintLeft_toRightOf="parent" />
+        <!-- Post webservice -->
+        <Button
+            android:id="@+id/post_webservice_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:drawableLeft="@drawable/btn_post_webservice"
+            android:drawableStart="@drawable/btn_post_webservice"
+            android:gravity="center"
+            android:onClick="onClickToPostWebservice"
+            android:text="@string/btn_to_post_webservice"
             app:layout_constraintLeft_toRightOf="parent" />
         <!-- WebView -->
         <Button
@@ -167,20 +181,6 @@
             android:text="@string/btn_to_broadcast_receiver"
             android:drawableStart="@drawable/btn_broadcast_receiver"
             android:drawableLeft="@drawable/btn_broadcast_receiver"
-            android:layout_marginLeft="@dimen/margin"
-            android:layout_marginRight="@dimen/margin"
-            android:layout_marginTop="@dimen/margin"
-            android:gravity="center"
-            app:layout_constraintLeft_toRightOf="parent"/>
-        <!-- Started Service -->
-        <Button
-            android:id="@+id/started_service_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickToStartedService"
-            android:text="@string/btn_to_started_service"
-            android:drawableStart="@drawable/btn_started_service"
-            android:drawableLeft="@drawable/btn_started_service"
             android:layout_marginLeft="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"

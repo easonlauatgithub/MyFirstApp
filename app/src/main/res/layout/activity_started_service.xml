@@ -11,22 +11,37 @@
         android:layout_height="wrap_content"
         android:text="@string/started_service_btn1_text"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
         android:onClick="onCreateDelayedMessageService"/>
     <Button
         android:id="@+id/started_service_btn_start_mp3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/started_service_btn_start_mp3_text"
+        android:text="@string/started_service_btn_start_mp3"
         android:layout_below="@+id/started_service_btn1"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
         android:onClick="onCreateBackgroundMP3"/>
+<!--    <Button
+        android:id="@+id/started_service_btn_pause_mp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/started_service_btn_pause_mp3"
+        android:layout_below="@+id/started_service_btn1"
+        android:layout_toRightOf="@+id/started_service_btn_start_mp3"
+        android:onClick="onPauseBackgroundMP3"/> -->
     <Button
         android:id="@+id/started_service_btn_stop_mp3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/started_service_btn_stop_mp3_text"
+        android:text="@string/started_service_btn_stop_mp3"
+        android:layout_below="@+id/started_service_btn1"
+        android:layout_toRightOf="@+id/started_service_btn_pause_mp3"
+        android:onClick="onStopBackgroundMP3"/>
+
+    <Spinner android:id="@+id/started_service_mp3_lists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/started_service_btn_start_mp3"
-        android:layout_centerHorizontal="true"
-        android:onClick="onCreateBackgroundMP3Stop"/>
+        android:entries="@array/started_service_mp3_list"
+        android:layout_alignParentLeft="true"/>
 </RelativeLayout>

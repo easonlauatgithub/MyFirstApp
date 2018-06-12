@@ -17,8 +17,8 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         //targetSdkVersion 25
-        versionCode 17
-        versionName "Android Studuio - versionName - 17"
+        versionCode 18
+        versionName "Android Studuio - versionName - 18"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

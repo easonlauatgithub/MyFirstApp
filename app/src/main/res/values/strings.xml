@@ -63,16 +63,23 @@
     <string name="action_create_order">Create Order</string>
     <string name="action_share">Share</string>
 
-    <string name="btn_to_bound_service">Bound Service</string>
+    <string name="btn_to_bound_service">GPS(Bound Service)</string>
     <string name="bound_service_btn1_text">Start</string>
     <string name="bound_service_btn2_text">Stop</string>
     <string name="bound_service_btn3_text">Reset</string>
 
-    <string name="btn_to_started_service">Started Service</string>
+    <string name="btn_to_started_service">MP3, Notification(Started Service)</string>
     <string name="started_service_btn_response">DelayedMessageService is created.</string>
-    <string name="started_service_btn1_text">Click to create Start Service (DelayedMessageService)</string>
-    <string name="started_service_btn_start_mp3_text">Play MP3</string>
-    <string name="started_service_btn_stop_mp3_text">Stop MP3</string>
+    <string name="started_service_btn1_text">Click to wait for notification</string>
+    <string name="started_service_btn_start_mp3">Play MP3</string>
+    <string name="started_service_btn_pause_mp3">Pause MP3</string>
+    <string name="started_service_btn_stop_mp3">Stop MP3</string>
+    <string-array name="started_service_mp3_list">
+        <item>Yoga Lin</item>
+        <item>Jay Chow</item>
+        <item>G Dragon</item>
+    </string-array>
+
 
     <string name="btn_to_broadcast_receiver">BroadcastReceiver/ Notification</string>
     <string name="hello_broadcast_receiver">Hello BroadcastReceiver</string>
