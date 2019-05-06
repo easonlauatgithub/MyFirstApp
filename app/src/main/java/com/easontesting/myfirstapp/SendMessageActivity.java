@@ -19,7 +19,8 @@ public class SendMessageActivity extends AppCompatActivity {
         String message = editText.getText().toString();
         //Intent intent = new Intent(this, DisplayMessageActivity.class);
         //intent.putExtra(EXTRA_MESSAGE, message);
-        Intent i1 = new Intent(Intent.ACTION_SEND);
+        Intent i1 = new Intent();
+        i1.setAction(Intent.ACTION_SEND);
         i1.setType("text/plain");
         i1.putExtra(Intent.EXTRA_TEXT, message);
         String title = getString(R.string.chooserTitle);

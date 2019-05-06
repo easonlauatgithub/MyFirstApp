@@ -1,5 +1,4 @@
 package com.easontesting.myfirstapp;
-
 import android.os.AsyncTask;
 import android.util.Log;
 import java.io.BufferedOutputStream;
@@ -15,24 +14,20 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
-
 public class PostWebserviceAsycn extends AsyncTask<String, Integer, String> {
     private String DEBUG_TAG = this.getClass().getSimpleName();
     public void funcDebug(){
         Log.w(DEBUG_TAG,Thread.currentThread().getStackTrace()[3].getMethodName());
     }
-
     private PostWebserviceActivity pwsMainActivity;
     PostWebserviceAsycn(PostWebserviceActivity ma) {
         pwsMainActivity = ma;
         funcDebug();
     }
-
     @Override
     protected void onPreExecute() {
         funcDebug();
     }
-
     @Override
     protected String doInBackground(String... params) {
         funcDebug();
@@ -51,7 +46,6 @@ public class PostWebserviceAsycn extends AsyncTask<String, Integer, String> {
         }
         return result;
     }
-
     private String postRequest(URL url, String postParamString, String httpMethod, String strRPCT) throws IOException {
         funcDebug();
         InputStream stream = null;
@@ -111,7 +105,6 @@ public class PostWebserviceAsycn extends AsyncTask<String, Integer, String> {
         }
         return result;
     }
-
     @Override
     protected void onPostExecute(String result) {
         funcDebug();
@@ -120,7 +113,6 @@ public class PostWebserviceAsycn extends AsyncTask<String, Integer, String> {
             pwsMainActivity.ap = null;
         }
     }
-
     public void writeStream(OutputStream out, String postParameters){
         funcDebug();
         Log.w(DEBUG_TAG, "postParameters: "+postParameters );

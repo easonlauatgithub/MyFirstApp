@@ -83,7 +83,7 @@
         android:id="@+id/pws_value_email"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pws_value_email"
+        android:hint="@string/pws_value_email"
         android:textAppearance="?android:attr/textAppearance"
         android:layout_marginBottom="@dimen/margin"/>
     <!-- surname -->
@@ -97,7 +97,7 @@
         android:id="@+id/pws_value_surname"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pws_value_surname"
+        android:hint="@string/pws_value_surname"
         android:textAppearance="?android:attr/textAppearance"
         android:layout_marginBottom="@dimen/margin" />
     <!-- givenName -->
@@ -111,7 +111,7 @@
         android:id="@+id/pws_value_givenName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pws_value_givenName"
+        android:hint="@string/pws_value_givenName"
         android:textAppearance="?android:attr/textAppearance"
         android:layout_marginBottom="@dimen/margin"/>
 </LinearLayout>

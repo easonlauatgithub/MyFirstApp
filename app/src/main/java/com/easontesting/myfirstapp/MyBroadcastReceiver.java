@@ -15,14 +15,14 @@ import java.util.Date;
 public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        String message = "message should be overriden";
+        String message = "";
         if(intent !=null){
-//            String name = intent.getStringExtra("name");
-//            int age = intent.getIntExtra("age", -1);
-//            message = "Receive intent: "+intent+" name: "+name+" of age: "+age+".";
-            message = "Receive intent: "+intent;
+            String name = intent.getStringExtra("name");
+            int age = intent.getIntExtra("age", -1);
+            message = "MyBroadcastReceiver receives intent: "+intent+", name: "+name+", age: "+age;
+            //message = "Receive intent: "+intent;
         } else{
-            message = "MyBroadcastReceiver onReceive intent is null";
+            message = "intent is null";
         }
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
         createNotification(context, intent);

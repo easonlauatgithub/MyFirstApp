@@ -1,11 +1,13 @@
 <resources>
-    <string name="app_name">App 1512 20180611</string>
+    <string name="app_name">App20190507 0043</string>
 
     <string name="btn_to_post_webservice">Post Webservice</string>
     <string name="pws_tv_return">Post Webservice and see the return value here</string>
     <string name="pws_click">Connect</string>
     <string name="pws_label_url">URL:</string>
     <string-array name="pws_arr_url">
+        <item>https://easonwebservice.000webhostapp.com/Android/saveData.php</item>
+        <item>https://deberra.000webhostapp.com/saveName.php</item>
         <item>http://192.168.56.101/api/Member/Register</item>
         <item>http://10.120.5.29/Android/saveName.php</item>
     </string-array>
@@ -20,6 +22,9 @@
     <string name="pws_value_surname">Kelvin</string>
     <string name="pws_label_givenName">Givenname:</string>
     <string name="pws_value_givenName">Durant</string>
+
+    <string name="baseadapter_listview_button">ListView(BaseAdapter)</string>
+    <string name="simpleadapter_listview_button">ListView(SimpleAdapter)</string>
 
     <string name="btn_to_webview">WebView</string>
     <string name="wv_editext">URL here</string>

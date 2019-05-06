@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.easontesting.myfirstapp.BroadcastReceiverTestActivity">
-    <TextView
-        android:id="@+id/BroadcastReceiverTestActivity_textView1"
+    <TextView android:id="@+id/BroadcastReceiverTestActivity_textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"
@@ -15,8 +14,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
         />
-    <Button
-        android:id="@+id/BroadcastReceiverTestActivity_btn1"
+    <Button android:id="@+id/BroadcastReceiverTestActivity_btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"
@@ -25,8 +23,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BroadcastReceiverTestActivity_textView1"
         android:onClick="createBroadcast"/>
-    <Button
-        android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn1"
+    <Button android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"
@@ -35,8 +32,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BroadcastReceiverTestActivity_btn1"
         android:onClick="createNotification1"/>
-    <Button
-        android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn2"
+    <Button android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"
@@ -45,8 +41,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BroadcastReceiverTestActivity_Notfiy_btn1"
         android:onClick="createNotification2"/>
-    <Button
-        android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn3"
+    <Button android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"
@@ -55,8 +50,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BroadcastReceiverTestActivity_Notfiy_btn2"
         android:onClick="createNotification3"/>
-    <Button
-        android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn4"
+    <Button android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"
@@ -65,8 +59,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BroadcastReceiverTestActivity_Notfiy_btn3"
         android:onClick="createNotification4"/>
-    <Button
-        android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn5"
+    <Button android:id="@+id/BroadcastReceiverTestActivity_Notfiy_btn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin"

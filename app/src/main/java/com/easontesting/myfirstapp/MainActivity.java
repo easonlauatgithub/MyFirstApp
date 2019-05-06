@@ -64,7 +64,17 @@ public class MainActivity extends AppCompatActivity { //res/values/styles
         startActivity(i);
     }
     public void onClickToPostWebservice(View view){
-        Intent i = new Intent(this, PostWebserviceActivity.class);
+        //Intent i = new Intent(this, PostWebserviceActivity.class);
+        Intent i = new Intent(this, PWOSActivity.class);
         startActivity(i);
     }
+    public void onClickToBaseAdapterListView(View view){
+        Intent i = new Intent(this, BaseAdapterListViewActivity.class);
+        startActivity(i);
+    }
+    public void onClickToSimpleAdapterListView(View view){
+        Intent i = new Intent(this, SimpleAdapterListViewActivity.class);
+        startActivity(i);
+    }
+
 }

@@ -21,7 +21,7 @@ import android.hardware.Camera;
 import java.util.Date;
 
 public class BroadcastReceiverTestActivity extends AppCompatActivity {
-    public static final String BROADCAST_ACTION = "ACTION123";
+//    public static final String BROADCAST_ACTION = "Action1";
     public String nameValue = "Eason Lau";
     public int ageValue = 30;
     @Override
@@ -31,11 +31,14 @@ public class BroadcastReceiverTestActivity extends AppCompatActivity {
     }
 
     public void createBroadcast(View v){
+        String BROADCAST_ACTION = "Action_1";
+        //Intent intent = new Intent(BROADCAST_ACTION);
         Intent intent = new Intent(BROADCAST_ACTION);
         intent.putExtra("name", nameValue);
         intent.putExtra("age", ageValue);
-        //sendBroadcast(intent);
-        Toast.makeText(BroadcastReceiverTestActivity.this, "Broadcast["+BROADCAST_ACTION+"] is created", Toast.LENGTH_SHORT).show();
+        sendBroadcast(intent);
+        //<intent-filter><action android:name="Action_1" /></intent-filter>
+        Toast.makeText(BroadcastReceiverTestActivity.this, "Broadcast["+BROADCAST_ACTION+"] is created", Toast.LENGTH_LONG).show();
     }
 
     // BroadcastReceiver ON during application on
@@ -43,17 +46,11 @@ public class BroadcastReceiverTestActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        IntentFilter filter1 = new IntentFilter(Intent.ACTION_TIME_TICK);
-        registerReceiver(receiver, filter1);
-        IntentFilter filter2 = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
-        registerReceiver(receiver, filter2);
-        IntentFilter filter3 = new IntentFilter(Intent.ACTION_BOOT_COMPLETED);
-        registerReceiver(receiver, filter3);
-        IntentFilter filter4 = new IntentFilter(Intent.ACTION_MANAGE_NETWORK_USAGE);
-        registerReceiver(receiver, filter4);
-        IntentFilter filter5 = new IntentFilter(Intent.ACTION_CAMERA_BUTTON);
-        registerReceiver(receiver, filter5);
-
+        IntentFilter if1 = new IntentFilter(Intent.ACTION_TIME_TICK);
+        registerReceiver(receiver, if1);
+        /* <intent-filter><action android:name="android.intent.action.AIRPLANE_MODE" /></intent-filter> replaced */
+        //IntentFilter if2 = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        //registerReceiver(receiver, if2);
     }
     @Override
     protected void onPause() {

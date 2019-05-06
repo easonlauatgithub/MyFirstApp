@@ -17,6 +17,34 @@
             android:layout_height="match_parent"
             android:src="@drawable/top_banner"
             android:scaleType="fitXY"/>
+        <!-- Post webservice -->
+        <Button
+            android:id="@+id/post_webservice_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:drawableLeft="@drawable/btn_post_webservice"
+            android:drawableStart="@drawable/btn_post_webservice"
+            android:gravity="center"
+            android:onClick="onClickToPostWebservice"
+            android:text="@string/btn_to_post_webservice"
+            app:layout_constraintLeft_toRightOf="parent" />
+        <!-- BroadcastReceiver -->
+        <Button
+            android:id="@+id/broadcast_receiver_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickToBroadcastReceiverTest"
+            android:text="@string/btn_to_broadcast_receiver"
+            android:drawableStart="@drawable/btn_broadcast_receiver"
+            android:drawableLeft="@drawable/btn_broadcast_receiver"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Started Service -->
         <Button
             android:id="@+id/started_service_button"
@@ -44,20 +72,6 @@
             android:gravity="center"
             android:onClick="onClickToMatchingGame"
             android:text="@string/btn_to_matching_game"
-            app:layout_constraintLeft_toRightOf="parent" />
-        <!-- Post webservice -->
-        <Button
-            android:id="@+id/post_webservice_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin"
-            android:layout_marginRight="@dimen/margin"
-            android:layout_marginTop="@dimen/margin"
-            android:drawableLeft="@drawable/btn_post_webservice"
-            android:drawableStart="@drawable/btn_post_webservice"
-            android:gravity="center"
-            android:onClick="onClickToPostWebservice"
-            android:text="@string/btn_to_post_webservice"
             app:layout_constraintLeft_toRightOf="parent" />
         <!-- WebView -->
         <Button
@@ -172,20 +186,6 @@
             android:layout_marginTop="@dimen/margin"
             android:gravity="center"
             app:layout_constraintLeft_toRightOf="parent"/>
-        <!-- BroadcastReceiver -->
-        <Button
-            android:id="@+id/broadcast_receiver_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickToBroadcastReceiverTest"
-            android:text="@string/btn_to_broadcast_receiver"
-            android:drawableStart="@drawable/btn_broadcast_receiver"
-            android:drawableLeft="@drawable/btn_broadcast_receiver"
-            android:layout_marginLeft="@dimen/margin"
-            android:layout_marginRight="@dimen/margin"
-            android:layout_marginTop="@dimen/margin"
-            android:gravity="center"
-            app:layout_constraintLeft_toRightOf="parent"/>
         <!-- Bound Service -->
         <Button
             android:id="@+id/bound_service_button"
@@ -195,6 +195,34 @@
             android:text="@string/btn_to_bound_service"
             android:drawableStart="@drawable/btn_bound_service"
             android:drawableLeft="@drawable/btn_bound_service"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- ListView - BaseAdapter -->
+        <Button
+            android:id="@+id/baseadapter_listview_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickToBaseAdapterListView"
+            android:text="@string/baseadapter_listview_button"
+            android:drawableStart="@drawable/btn_layout"
+            android:drawableLeft="@drawable/btn_layout"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="parent"/>
+        <!-- ListView - SimpleAdapter -->
+        <Button
+            android:id="@+id/simpleadapter_listview_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickToSimpleAdapterListView"
+            android:text="@string/simpleadapter_listview_button"
+            android:drawableStart="@drawable/btn_layout"
+            android:drawableLeft="@drawable/btn_layout"
             android:layout_marginLeft="@dimen/margin"
             android:layout_marginRight="@dimen/margin"
             android:layout_marginTop="@dimen/margin"

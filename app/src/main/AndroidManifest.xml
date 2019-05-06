@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 
     <application
         android:allowBackup="true"
@@ -23,11 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SendMessageActivity" />
         <activity android:name=".DisplayMessageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
-
-                <category android:name="android.intent.category.DEFAULT" />
 
                 <data android:mimeType="text/plain" />
                 <data android:mimeType="image/*" />
@@ -48,14 +49,16 @@
         <activity android:name=".DrinkActivity" />
         <activity android:name=".FragmentActivity" />
         <activity android:name=".BroadcastReceiverTestActivity" />
-        <!--
-        BroadcastReceiver ON all time
-        <receiver android:name="MyBroadcastReceiver">
+        <!-- BroadcastReceiver ON all timec -->
+        <receiver android:name=".MyBroadcastReceiver">
             <intent-filter>
-                <action android:name="ACTION123" />
+                <action android:name="Action_1" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
             </intent-filter>
         </receiver>
-        -->
+
         <activity android:name=".StartedServiceActivity" />
 
         <service
@@ -78,7 +81,6 @@
         </service>
 
         <activity android:name=".WorkoutDetailIndependentActivity" />
-        <activity android:name=".SendMessageActivity" />
         <activity
             android:name=".ActionBarActivity"
             android:label="@string/btn_to_actionbar"
@@ -99,7 +101,10 @@
             android:name=".MatchingGameActivity"
             android:label="@string/btn_to_matching_game" />
         <activity android:name=".WebViewActivity" />
-        <activity android:name=".PostWebserviceActivity"></activity>
+        <activity android:name=".PostWebserviceActivity" />
+        <activity android:name=".BaseAdapterListViewActivity" />
+        <activity android:name=".SimpleAdapterListViewActivity" />
+        <activity android:name=".PWOSActivity"></activity>
     </application>
 
 </manifest>

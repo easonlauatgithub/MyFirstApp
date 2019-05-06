@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:text="@string/started_service_btn_stop_mp3"
         android:layout_below="@+id/started_service_btn1"
-        android:layout_toRightOf="@+id/started_service_btn_pause_mp3"
+        android:layout_toRightOf="@+id/started_service_btn_start_mp3"
         android:onClick="onStopBackgroundMP3"/>
 
     <Spinner android:id="@+id/started_service_mp3_lists"
