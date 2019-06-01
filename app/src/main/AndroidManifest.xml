@@ -8,8 +8,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -35,16 +34,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".NewsArticles" />
-        <activity
-            android:name=".FindBeerActivity"
+        <activity android:name=".FindBeerActivity"
             android:label="@string/title_activity_find_beer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".TimerActivity" />
         <activity android:name=".CarParkTimer" />
         <activity android:name=".LayoutActivity" />
         <activity android:name=".TopLevelActivity" />
-        <activity
-            android:name=".DrinkCategoryActivity"
+        <activity android:name=".DrinkCategoryActivity"
             android:label="@string/title_activity_drink_category" />
         <activity android:name=".DrinkActivity" />
         <activity android:name=".FragmentActivity" />
@@ -104,7 +101,15 @@
         <activity android:name=".PostWebserviceActivity" />
         <activity android:name=".BaseAdapterListViewActivity" />
         <activity android:name=".SimpleAdapterListViewActivity" />
-        <activity android:name=".PWOSActivity"></activity>
+        <activity android:name=".PWOSActivity" />
+        <activity android:name=".AuthenticationActivity" />
+        <service android:name=".FCMreceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

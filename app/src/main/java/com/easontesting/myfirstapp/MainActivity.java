@@ -15,6 +15,10 @@ public class MainActivity extends AppCompatActivity { //res/values/styles
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+    public void onClickToAuthentication(View view){
+        Intent i = new Intent(this, AuthenticationActivity.class);
+        startActivity(i);
+    }
     public void onClickToSendMessage(View view){
         Intent intent = new Intent(this, SendMessageActivity.class);
         startActivity(intent);

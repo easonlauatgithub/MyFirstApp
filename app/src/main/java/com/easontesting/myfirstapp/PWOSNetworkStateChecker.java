@@ -62,6 +62,8 @@ public class PWOSNetworkStateChecker extends BroadcastReceiver {
     * */
     private void saveName(final int id, final String name) {
         Log.w(tag, "easontesting "+tag+" saveName 1");
+        Log.w(tag, "easontesting "+tag+" id:"+id);
+        Log.w(tag, "easontesting "+tag+" name:"+name);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, PWOSActivity.URL_SAVE_NAME,
                 new Response.Listener<String>() {
                     @Override
@@ -85,6 +87,7 @@ public class PWOSNetworkStateChecker extends BroadcastReceiver {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.w(tag, "easontesting "+tag+" onErrorResponse 1");
+                        Log.w(tag, "easontesting "+tag+" VolleyError:"+error);
                     }
                 }) {
             @Override

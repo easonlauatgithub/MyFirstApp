@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -29,12 +31,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PWOSActivity extends AppCompatActivity implements View.OnClickListener{
+//public class PWOSActivity extends AppCompatActivity implements View.OnClickListener{
+public class PWOSActivity extends AppCompatActivity{
     private final String tag = "PWOSActivity";
     /* url to webservice */
-    //public static final String URL_SAVE_NAME = "https://deberra.000webhostapp.com/saveName.php";
-    public static final String URL_SAVE_NAME = "https://easonwebservice.000webhostapp.com/Android/saveData.php";
+    public static final String URL_SAVE_NAME = "http://deberra.000webhostapp.com/saveName.php";
+    //public static final String URL_SAVE_NAME = "https://easonwebservice.000webhostapp.com/Android/saveData.php";
     private PWOSDatabaseHelper db;
+    private Button buttonShowAll;
     private Button buttonSave;
     private EditText editTextName;
     private ListView listViewNames;
@@ -60,11 +64,27 @@ public class PWOSActivity extends AppCompatActivity implements View.OnClickListe
         //initializing views and objects
         db = new PWOSDatabaseHelper(this);
         names = new ArrayList<>();
+        buttonShowAll = (Button) findViewById(R.id.buttonShowAll);
         buttonSave = (Button) findViewById(R.id.buttonSave);
         editTextName = (EditText) findViewById(R.id.editTextName);
         listViewNames = (ListView) findViewById(R.id.listViewNames);
         //adding click listener to button
-        buttonSave.setOnClickListener(this);
+        //buttonSave.setOnClickListener(this);
+        buttonSave.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                saveNameToServer();
+            }
+        });
+        buttonShowAll.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //Toast.makeText(PWOSActivity.this,"go to website to see all data",Toast.LENGTH_LONG).show();
+                Uri uriUrl = Uri.parse("http://deberra.000webhostapp.com/showName.php");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
+            }
+        });
         Log.w(tag, "easontesting "+tag+" onCreate 2");
         //calling the method to load all the stored names
         loadNames();
@@ -153,6 +173,7 @@ public class PWOSActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Log.w(tag, "easontesting "+tag+" saveNameToServer 10");
+                        Log.w(tag, "easontesting "+tag+" VolleyError:"+error);
                         progressDialog.dismiss();
                         Log.w(tag, "easontesting "+tag+" saveNameToServer 11");
                         //on error storing the name to sqlite with status unsynced
@@ -184,10 +205,14 @@ public class PWOSActivity extends AppCompatActivity implements View.OnClickListe
         refreshList();
         Log.w(tag, "easontesting "+tag+" saveNameToLocalStorage 4");
     }
+
+    /*
     @Override
     public void onClick(View view) {
         Log.w(tag, "easontesting "+tag+" onClick 1");
         saveNameToServer();
         Log.w(tag, "easontesting "+tag+" onClick 2");
     }
+    */
+
 }

@@ -17,6 +17,20 @@
             android:layout_height="match_parent"
             android:src="@drawable/top_banner"
             android:scaleType="fitXY"/>
+        <!-- Firebase Authentication -->
+        <Button
+            android:id="@+id/authentication_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:drawableLeft="@drawable/btn_authentication"
+            android:drawableStart="@drawable/btn_authentication"
+            android:gravity="center"
+            android:onClick="onClickToAuthentication"
+            android:text="@string/btn_to_authentication"
+            app:layout_constraintLeft_toRightOf="parent" />
         <!-- Post webservice -->
         <Button
             android:id="@+id/post_webservice_button"
