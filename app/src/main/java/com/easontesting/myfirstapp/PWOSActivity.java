@@ -103,7 +103,7 @@ public class PWOSActivity extends AppCompatActivity{
         //registering the broadcast receiver to update sync status
         registerReceiver(broadcastReceiver, new IntentFilter(DATA_SAVED_BROADCAST));
         Log.w(tag, "easontesting "+tag+" onCreate 5");
-        //register NetworkStateChecker.java
+        //register NetworkStateChecker.java, similar to registered in AndroidManifest.xml
         registerReceiver(new PWOSNetworkStateChecker(), new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
         Log.w(tag, "easontesting "+tag+" onCreate 6");
     }

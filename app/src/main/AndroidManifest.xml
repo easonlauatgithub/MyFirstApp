@@ -58,18 +58,15 @@
 
         <activity android:name=".StartedServiceActivity" />
 
-        <service
-            android:name=".DelayedMessageService"
+        <service android:name=".DelayedMessageService"
             android:exported="false" />
         <!-- android:exported="false" Can't be used by other apps -->
-        <service
-            android:name=".BackgroundMP3Service"
+        <service android:name=".BackgroundMP3Service"
             android:exported="false" />
 
         <activity android:name=".BoundServiceActivity" />
 
-        <service
-            android:name=".OdometerService"
+        <service android:name=".OdometerService"
             android:enabled="true"
             android:exported="false">
 
@@ -78,12 +75,10 @@
         </service>
 
         <activity android:name=".WorkoutDetailIndependentActivity" />
-        <activity
-            android:name=".ActionBarActivity"
+        <activity android:name=".ActionBarActivity"
             android:label="@string/btn_to_actionbar"
             android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".OrderActivity"
+        <activity android:name=".OrderActivity"
             android:label="@string/action_create_order"
             android:parentActivityName=".ActionBarActivity"
             android:theme="@style/AppTheme2">
@@ -94,8 +89,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ActionBarActivity" />
         </activity>
-        <activity
-            android:name=".MatchingGameActivity"
+        <activity android:name=".MatchingGameActivity"
             android:label="@string/btn_to_matching_game" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".PostWebserviceActivity" />
